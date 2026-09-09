@@ -6,5 +6,6 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - run: ./mvnw -B dependency:go-offline
+      - run: mvn -B dependency:go-offline
+      - run: mvn -B test
       - run: git config core.hooksPath .githooks
